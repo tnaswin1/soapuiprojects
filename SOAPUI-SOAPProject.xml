@@ -1205,13 +1205,13 @@ declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
  <sessionid>${TestCaseProperties#sessionid}</sessionid>
  </sam:logout>
  </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="265c6da2-f1a4-43f5-8012-a6fbfea0fd02"/><con:assertion type="Schema Compliance" id="34307f80-7d6d-498e-ab82-e09eddbbf6a8"><con:configuration/></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>item</con:name><con:value>Item 3</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SimpleSearch_Groovytosetuserid&amp;password" searchProperties="true" maxResults="0" id="ae8b3e90-abf3-4b0d-93a6-3927d631acf0"><con:description>TestCase - Simple Search TestCase
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="265c6da2-f1a4-43f5-8012-a6fbfea0fd02"/><con:assertion type="Schema Compliance" id="34307f80-7d6d-498e-ab82-e09eddbbf6a8"><con:configuration/></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>item</con:name><con:value>Item 3</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Search_Groovytosetuseridpwd&amp;Assert" searchProperties="true" maxResults="0" id="ae8b3e90-abf3-4b0d-93a6-3927d631acf0"><con:description>TestCase - Simple Search TestCase
 
 
 The test extends the previous TastCases by doing a simple search between login and logout.
 
 We are using a Property Transfer Step to move password and user name from a Properties Step to the 
-Request and a second Property Transfer Step to move the sessionID we got in the login response to the logout request..</con:description><con:settings/><con:testStep type="properties" name="TestCaseProperties" id="90375fcd-0146-4847-b218-0894fd1f0e80"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Username</con:name><con:value>Logini${=String.valueOf(Math.random()).substring( 0, 5 )}</con:value></con:property><con:property><con:name>Password</con:name><con:value>Logini123</con:value></con:property><con:property><con:name>SearchPhrase</con:name><con:value>Item 1</con:value></con:property><con:property><con:name>sessionid</con:name><con:value>3536212322210124</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="GroovyLogprint" id="4e41b67e-c78f-4d8c-8ec2-1f905952f866" disabled="true"><con:settings/><con:config><script>log.info "This script walks through some basic groovy commands"
+Request and a second Property Transfer Step to move the sessionID we got in the login response to the logout request..</con:description><con:settings/><con:testStep type="properties" name="TestCaseProperties" id="90375fcd-0146-4847-b218-0894fd1f0e80"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Username</con:name><con:value>Logini${=String.valueOf(Math.random()).substring( 0, 5 )}</con:value></con:property><con:property><con:name>Password</con:name><con:value>Logini123</con:value></con:property><con:property><con:name>SearchPhrase</con:name><con:value>Item 1</con:value></con:property><con:property><con:name>sessionid</con:name><con:value>354602226803195</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="GroovyLogprint" id="4e41b67e-c78f-4d8c-8ec2-1f905952f866" disabled="true"><con:settings/><con:config><script>log.info "This script walks through some basic groovy commands"
 
 log.info "item at properties " + context.expand('${TestCaseProperties#SearchPhrase}')
 log.info "item at testcase " + context.expand('${#TestCase#item}')
@@ -1239,11 +1239,20 @@ testRunner.testCase.testSteps["TestRequest-login"].setPropertyValue("Request",up
  <soapenv:Header/>
  <soapenv:Body>
  <sam:login>
- <username>Logini0.179</username>
+ <username>Logini0.727</username>
  <password>Logini123</password>
  </sam:login>
  </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d6e010a6-df88-4b19-a53e-5a9a1d91c98f"/><con:assertion type="Schema Compliance" id="943874d3-eca7-49c8-bc66-aa7ff6544da5"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="4d19c387-e61f-4edb-99ce-11b45567327e"/><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="SetSession" id="0aa6cc92-1290-4a3c-bfbb-e62871fe7b34"><con:settings/><con:config><script>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d6e010a6-df88-4b19-a53e-5a9a1d91c98f"/><con:assertion type="Schema Compliance" id="943874d3-eca7-49c8-bc66-aa7ff6544da5"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="4d19c387-e61f-4edb-99ce-11b45567327e"/><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="ValidateLogin" id="2c96f742-ecf5-4fda-a71a-e24c7da24545"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
+
+def loginResponse = testRunner.testCase.testSteps["TestRequest-login"].getPropertyValue("Response")
+
+def xmlResponse = new XmlHolder(loginResponse)
+def sessionId = xmlResponse.getNodeValue("//sam:loginResponse/sessionid")
+log.info sessionId
+
+assert sessionId.isNumber()
+</script></con:config></con:testStep><con:testStep type="groovy" name="SetSession" id="0aa6cc92-1290-4a3c-bfbb-e62871fe7b34"><con:settings/><con:config><script>
 def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
 def holder = groovyUtils.getXmlHolder("TestRequest-login#Response")
 holder.namespaces["sam"] = "http://www.soapui.org/sample/"
@@ -1362,14 +1371,23 @@ declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
     <description>*</description>
     <price>*</price>
   </item>
-</sam:searchResponseContent>]]></content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request - logout" id="7c58d784-4b75-401b-ac68-413968adb019"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>logout</con:operation><con:request name="Test Request - logout" outgoingWss="" incomingWss="" id="44ad4f70-0d9a-4206-b78c-567df4594a51"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8088/mockServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+</sam:searchResponseContent>]]></content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="TestRequest-logout" id="7c58d784-4b75-401b-ac68-413968adb019"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>logout</con:operation><con:request name="TestRequest-logout" outgoingWss="" incomingWss="" id="44ad4f70-0d9a-4206-b78c-567df4594a51"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8088/mockServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
  <soapenv:Header/>
  <soapenv:Body>
  <sam:logout>
  <sessionid>${TestCaseProperties#sessionid}</sessionid>
  </sam:logout>
  </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="265c6da2-f1a4-43f5-8012-a6fbfea0fd02"/><con:assertion type="Schema Compliance" id="34307f80-7d6d-498e-ab82-e09eddbbf6a8"><con:configuration/></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>item</con:name><con:value>Item 3</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:properties><con:property><con:name>item</con:name><con:value>Item 2</con:value></con:property></con:properties><con:setupScript/><con:tearDownScript/><con:reportScript>import soapui.demo.subreport.SystemPropertiesSubReport
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="265c6da2-f1a4-43f5-8012-a6fbfea0fd02"/><con:assertion type="Schema Compliance" id="34307f80-7d6d-498e-ab82-e09eddbbf6a8"><con:configuration/></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="ValidateLogout" id="8b94f429-c61a-444d-b86e-1f2677f98ccc"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
+
+def logoutResponse = testRunner.testCase.testSteps["TestRequest-logout"].getPropertyValue("Response")
+
+def xmlResponse = new XmlHolder(logoutResponse)
+def sessioninfo = xmlResponse.getNodeValue("//sam:logoutResponse/sessioninfo")
+log.info sessioninfo
+
+assert (sessioninfo == "OK")
+</script></con:config></con:testStep><con:properties><con:property><con:name>item</con:name><con:value>Item 3</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:properties><con:property><con:name>item</con:name><con:value>Item 2</con:value></con:property></con:properties><con:setupScript/><con:tearDownScript/><con:reportScript>import soapui.demo.subreport.SystemPropertiesSubReport
 
 if( !report.hasSubReport( "SystemProperties" ))
 {
