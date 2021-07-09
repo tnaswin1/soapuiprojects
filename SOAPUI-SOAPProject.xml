@@ -1060,7 +1060,7 @@ log.info testRunner.testCase.testSteps["Test Request - logout"].getPropertyValue
 The test extends the previous TastCases by doing a simple search between login and logout.
 
 We are using a Property Transfer Step to move password and user name from a Properties Step to the 
-Request and a second Property Transfer Step to move the sessionID we got in the login response to the logout request..</con:description><con:settings/><con:testStep type="properties" name="TestCaseProperties" id="27badb32-1d51-4dc7-a91b-e9ba831b1a5e"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Username</con:name><con:value>Logini${=String.valueOf(Math.random()).substring( 0, 5 )}</con:value></con:property><con:property><con:name>Password</con:name><con:value>Logini123</con:value></con:property><con:property><con:name>SearchPhrase</con:name><con:value>Item 1</con:value></con:property><con:property><con:name>sessionid</con:name><con:value>9715343647114283</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="GroovyLogprint" id="3775243e-4ac2-4859-ace2-106bd29fc4c7" disabled="true"><con:settings/><con:config><script>log.info "This script walks through some basic groovy commands"
+Request and a second Property Transfer Step to move the sessionID we got in the login response to the logout request..</con:description><con:settings/><con:testStep type="properties" name="TestCaseProperties" id="27badb32-1d51-4dc7-a91b-e9ba831b1a5e"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Username</con:name><con:value>Logini${=String.valueOf(Math.random()).substring( 0, 5 )}</con:value></con:property><con:property><con:name>Password</con:name><con:value>Logini123</con:value></con:property><con:property><con:name>SearchPhrase</con:name><con:value>Item 1</con:value></con:property><con:property><con:name>sessionid</con:name><con:value>23222040537615474</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="GroovyLogprint" id="3775243e-4ac2-4859-ace2-106bd29fc4c7" disabled="true"><con:settings/><con:config><script>log.info "This script walks through some basic groovy commands"
 
 log.info "item at properties " + context.expand('${TestCaseProperties#SearchPhrase}')
 log.info "item at testcase " + context.expand('${#TestCase#item}')
@@ -1205,7 +1205,171 @@ declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
  <sessionid>${TestCaseProperties#sessionid}</sessionid>
  </sam:logout>
  </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="265c6da2-f1a4-43f5-8012-a6fbfea0fd02"/><con:assertion type="Schema Compliance" id="34307f80-7d6d-498e-ab82-e09eddbbf6a8"><con:configuration/></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>item</con:name><con:value>Item 3</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:testCase id="c88d4476-2ecf-4ef7-a5f7-8837420cf42c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 3" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties><con:property><con:name>item</con:name><con:value>Item 2</con:value></con:property></con:properties><con:setupScript/><con:tearDownScript/><con:reportScript>import soapui.demo.subreport.SystemPropertiesSubReport
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="265c6da2-f1a4-43f5-8012-a6fbfea0fd02"/><con:assertion type="Schema Compliance" id="34307f80-7d6d-498e-ab82-e09eddbbf6a8"><con:configuration/></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>item</con:name><con:value>Item 3</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SimpleSearch_Groovytosetuserid&amp;password" searchProperties="true" maxResults="0" id="ae8b3e90-abf3-4b0d-93a6-3927d631acf0"><con:description>TestCase - Simple Search TestCase
+
+
+The test extends the previous TastCases by doing a simple search between login and logout.
+
+We are using a Property Transfer Step to move password and user name from a Properties Step to the 
+Request and a second Property Transfer Step to move the sessionID we got in the login response to the logout request..</con:description><con:settings/><con:testStep type="properties" name="TestCaseProperties" id="90375fcd-0146-4847-b218-0894fd1f0e80"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Username</con:name><con:value>Logini${=String.valueOf(Math.random()).substring( 0, 5 )}</con:value></con:property><con:property><con:name>Password</con:name><con:value>Logini123</con:value></con:property><con:property><con:name>SearchPhrase</con:name><con:value>Item 1</con:value></con:property><con:property><con:name>sessionid</con:name><con:value>3536212322210124</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="GroovyLogprint" id="4e41b67e-c78f-4d8c-8ec2-1f905952f866" disabled="true"><con:settings/><con:config><script>log.info "This script walks through some basic groovy commands"
+
+log.info "item at properties " + context.expand('${TestCaseProperties#SearchPhrase}')
+log.info "item at testcase " + context.expand('${#TestCase#item}')
+log.info "item at testsuite " + context.expand('${#TestSuite#item}')
+log.info "item at project " + context.expand('${#Project#item}')
+
+log.info testRunner.testCase.getPropertyValue("item")
+log.info testRunner.testCase.testSuite.getPropertyValue("item")
+log.info testRunner.testCase.testSuite.project.getPropertyValue("item")
+log.info testRunner.testCase.testSteps["Test Request - logout"].getPropertyValue("Request")
+//testRunner.testCase.testSuite.testCases["SimpleSearch_Properties"].getPropertyValue("item")</script></con:config></con:testStep><con:testStep type="groovy" name="SetUseridPassword" id="e1af3afe-a0fd-4415-87d1-dcc5dda8c323"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
+
+def loginRequest = testRunner.testCase.testSteps["TestRequest-login"].getPropertyValue("Request")
+//log.info loginRequest
+String loginId =  "Logini" + String.valueOf(Math.random()).substring( 0, 5 )
+String password = "Logini123"
+log.info loginId
+
+def xmlAdd = new XmlHolder(loginRequest)
+xmlAdd.setNodeValue("//sam:login/username",loginId)
+xmlAdd.setNodeValue("//sam:login/password",password)
+def updatedXml = xmlAdd.getXml()
+
+testRunner.testCase.testSteps["TestRequest-login"].setPropertyValue("Request",updatedXml)</script></con:config></con:testStep><con:testStep type="request" name="TestRequest-login" id="141cadaf-2bef-4f13-9fd2-c5a41517bd2e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>login</con:operation><con:request name="TestRequest-login" outgoingWss="" incomingWss="" id="23ba5de1-d941-4ad4-bee7-3506545648fd"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8088/mockServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:login>
+ <username>Logini0.179</username>
+ <password>Logini123</password>
+ </sam:login>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d6e010a6-df88-4b19-a53e-5a9a1d91c98f"/><con:assertion type="Schema Compliance" id="943874d3-eca7-49c8-bc66-aa7ff6544da5"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="4d19c387-e61f-4edb-99ce-11b45567327e"/><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="SetSession" id="0aa6cc92-1290-4a3c-bfbb-e62871fe7b34"><con:settings/><con:config><script>
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+def holder = groovyUtils.getXmlHolder("TestRequest-login#Response")
+holder.namespaces["sam"] = "http://www.soapui.org/sample/"
+log.info holder.getNodeValue("//sam:loginResponse/sessionid")
+def sessionidValue = holder.getNodeValue("//sam:loginResponse/sessionid")
+
+testRunner.testCase.testSteps["TestCaseProperties"].setPropertyValue( "sessionid", sessionidValue )
+</script></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer - Move sessionID" id="c8bd6c20-7578-4480-a9bc-bc1a5dca64d9"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>MoveSearchstring</con:name><con:sourceType>SearchPhrase</con:sourceType><con:sourceStep>TestCaseProperties</con:sourceStep><con:sourcePath/><con:targetType>Request</con:targetType><con:targetStep>Search-PropertyatProperties</con:targetStep><con:targetPath>declare namespace sam='http://www.soapui.org/sample/';
+//sam:search/searchstring</con:targetPath><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="Search-PropertyatProperties" id="a0cb774e-ae51-4c6a-89cd-c22bb5f19b95"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>search</con:operation><con:request name="Search-PropertyatProperties" outgoingWss="" incomingWss="" id="32b115c8-e933-49a3-b4e4-5e0b9586428d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8088/mockServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:search>
+ <sessionid>${TestCaseProperties#sessionid}</sessionid>
+  <searchstring>Item 1</searchstring>
+ </sam:search>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="18c3bb27-f4af-4dba-8bbf-ba281e8a2d79"/><con:assertion type="Schema Compliance" id="56208e31-21e6-46e4-9501-3c9414081f3e"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="06440ca6-1d1c-4097-944b-a687f7979e35"/><con:assertion type="XPath Match" id="6648b481-abf2-4cd3-a775-5b1779e66f80" name="XPath Match"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//sam:searchResponse/sam:searchResponseContent/item/id='Item 1' and
+//sam:searchResponse/sam:searchResponseContent/item/price='1' and
+exists(//sam:searchResponse/sam:searchResponseContent/item/description)</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="2c7f19e1-6694-4838-8d6d-c76edc6d2c16" name="XPathMatch-Count"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+count(//sam:searchResponse/sam:searchResponseContent/item/price)=1</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="b41ed2f0-4ff5-46e4-8147-a150637015c6" name="XPathMatch-wildcard"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//sam:searchResponse/sam:searchResponseContent</path><content><![CDATA[<sam:searchResponseContent xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+  <item>
+    <id>*</id>
+    <description>*</description>
+    <price>*</price>
+  </item>
+</sam:searchResponseContent>]]></content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Search-PropertyatTestCaseLevel" id="7e0a77b9-6dba-4a99-b949-7ba800872613"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>search</con:operation><con:request name="Search-PropertyatTestCaseLevel" outgoingWss="" incomingWss="" id="32b115c8-e933-49a3-b4e4-5e0b9586428d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8088/mockServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:search>
+ <sessionid>${TestCaseProperties#sessionid}</sessionid>
+  <searchstring>${#TestCase#item}</searchstring>
+ </sam:search>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="18c3bb27-f4af-4dba-8bbf-ba281e8a2d79"/><con:assertion type="Schema Compliance" id="56208e31-21e6-46e4-9501-3c9414081f3e"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="06440ca6-1d1c-4097-944b-a687f7979e35"/><con:assertion type="XPath Match" id="6648b481-abf2-4cd3-a775-5b1779e66f80" name="XPath Match"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//sam:searchResponse/sam:searchResponseContent/item/id='Item 3' and
+//sam:searchResponse/sam:searchResponseContent/item/price='2.99' and
+exists(//sam:searchResponse/sam:searchResponseContent/item/description)</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="2c7f19e1-6694-4838-8d6d-c76edc6d2c16" name="XPathMatch-Count"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+count(//sam:searchResponse/sam:searchResponseContent/item/price)=1</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="b41ed2f0-4ff5-46e4-8147-a150637015c6" name="XPathMatch-wildcard"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//sam:searchResponse/sam:searchResponseContent</path><content><![CDATA[<sam:searchResponseContent xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+  <item>
+    <id>*</id>
+    <description>*</description>
+    <price>*</price>
+  </item>
+</sam:searchResponseContent>]]></content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Search-PropertyatTestSuiteLevel" id="65c83c96-bb4b-4636-a218-81ce69eb58c9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>search</con:operation><con:request name="Search-PropertyatTestSuiteLevel" outgoingWss="" incomingWss="" id="32b115c8-e933-49a3-b4e4-5e0b9586428d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8088/mockServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:search>
+ <sessionid>${TestCaseProperties#sessionid}</sessionid>
+  <searchstring>${#TestSuite#item}</searchstring>
+ </sam:search>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="18c3bb27-f4af-4dba-8bbf-ba281e8a2d79"/><con:assertion type="Schema Compliance" id="56208e31-21e6-46e4-9501-3c9414081f3e"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="06440ca6-1d1c-4097-944b-a687f7979e35"/><con:assertion type="XPath Match" id="6648b481-abf2-4cd3-a775-5b1779e66f80" name="XPath Match"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//sam:searchResponse/sam:searchResponseContent/item/id='Item 2' and
+//sam:searchResponse/sam:searchResponseContent/item/price='1.99' and
+exists(//sam:searchResponse/sam:searchResponseContent/item/description)</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="2c7f19e1-6694-4838-8d6d-c76edc6d2c16" name="XPathMatch-Count"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+count(//sam:searchResponse/sam:searchResponseContent/item/price)=1</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="b41ed2f0-4ff5-46e4-8147-a150637015c6" name="XPathMatch-wildcard"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//sam:searchResponse/sam:searchResponseContent</path><content><![CDATA[<sam:searchResponseContent xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+  <item>
+    <id>*</id>
+    <description>*</description>
+    <price>*</price>
+  </item>
+</sam:searchResponseContent>]]></content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Search-PropertyatProjectLevel" id="3050337f-827d-4be6-95c9-db5485fd4116"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>search</con:operation><con:request name="Search-PropertyatProjectLevel" outgoingWss="" incomingWss="" id="32b115c8-e933-49a3-b4e4-5e0b9586428d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8088/mockServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:search>
+ <sessionid>${TestCaseProperties#sessionid}</sessionid>
+  <searchstring>${#Project#item}</searchstring>
+ </sam:search>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="18c3bb27-f4af-4dba-8bbf-ba281e8a2d79"/><con:assertion type="Schema Compliance" id="56208e31-21e6-46e4-9501-3c9414081f3e"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="06440ca6-1d1c-4097-944b-a687f7979e35"/><con:assertion type="XPath Match" id="6648b481-abf2-4cd3-a775-5b1779e66f80" name="XPath Match"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//sam:searchResponse/sam:searchResponseContent/item/id='Item 1' and
+//sam:searchResponse/sam:searchResponseContent/item/price='1' and
+exists(//sam:searchResponse/sam:searchResponseContent/item/description)</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="2c7f19e1-6694-4838-8d6d-c76edc6d2c16" name="XPathMatch-Count"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+count(//sam:searchResponse/sam:searchResponseContent/item/price)=1</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="b41ed2f0-4ff5-46e4-8147-a150637015c6" name="XPathMatch-wildcard"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//sam:searchResponse/sam:searchResponseContent</path><content><![CDATA[<sam:searchResponseContent xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+  <item>
+    <id>*</id>
+    <description>*</description>
+    <price>*</price>
+  </item>
+</sam:searchResponseContent>]]></content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Search-FromProperties" id="360adea1-3973-42eb-8399-e0edef9b63e7"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>search</con:operation><con:request name="Search-FromProperties" outgoingWss="" incomingWss="" id="32b115c8-e933-49a3-b4e4-5e0b9586428d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8088/mockServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:search>
+ <sessionid>${TestCaseProperties#sessionid}</sessionid>
+  <searchstring>${TestCaseProperties#SearchPhrase}</searchstring>
+ </sam:search>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="18c3bb27-f4af-4dba-8bbf-ba281e8a2d79"/><con:assertion type="Schema Compliance" id="56208e31-21e6-46e4-9501-3c9414081f3e"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="06440ca6-1d1c-4097-944b-a687f7979e35"/><con:assertion type="XPath Match" id="6648b481-abf2-4cd3-a775-5b1779e66f80" name="XPath Match"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//sam:searchResponse/sam:searchResponseContent/item/id='Item 1' and
+//sam:searchResponse/sam:searchResponseContent/item/price='1' and
+exists(//sam:searchResponse/sam:searchResponseContent/item/description)</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="2c7f19e1-6694-4838-8d6d-c76edc6d2c16" name="XPathMatch-Count"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+count(//sam:searchResponse/sam:searchResponseContent/item/price)=1</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="b41ed2f0-4ff5-46e4-8147-a150637015c6" name="XPathMatch-wildcard"><con:configuration><path>declare namespace sam='http://www.soapui.org/sample/';
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+//sam:searchResponse/sam:searchResponseContent</path><content><![CDATA[<sam:searchResponseContent xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+  <item>
+    <id>*</id>
+    <description>*</description>
+    <price>*</price>
+  </item>
+</sam:searchResponseContent>]]></content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request - logout" id="7c58d784-4b75-401b-ac68-413968adb019"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>logout</con:operation><con:request name="Test Request - logout" outgoingWss="" incomingWss="" id="44ad4f70-0d9a-4206-b78c-567df4594a51"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8088/mockServiceSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:logout>
+ <sessionid>${TestCaseProperties#sessionid}</sessionid>
+ </sam:logout>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="265c6da2-f1a4-43f5-8012-a6fbfea0fd02"/><con:assertion type="Schema Compliance" id="34307f80-7d6d-498e-ab82-e09eddbbf6a8"><con:configuration/></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>item</con:name><con:value>Item 3</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:properties><con:property><con:name>item</con:name><con:value>Item 2</con:value></con:property></con:properties><con:setupScript/><con:tearDownScript/><con:reportScript>import soapui.demo.subreport.SystemPropertiesSubReport
 
 if( !report.hasSubReport( "SystemProperties" ))
 {
